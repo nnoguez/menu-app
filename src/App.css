@@ -1,0 +1,84 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+html {
+  padding: 50px 400px 50px 400px;
+  background-image: url("../src/img/bg.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+body {
+  background-color:rgb(253, 237, 212);
+  border: 9px double black;
+  padding: 40px;
+}
+
+h1 {
+  font-family: cursive;
+  font-size: 40px;
+  letter-spacing: 5px;
+  line-height: 0%;
+  color: rgb(199, 155, 61);
+  text-shadow: 2px 2px rgb(233, 215, 187);
+}
+
+p {
+  color: rgb(83, 83, 83);
+}
+
+.menu-item {
+  padding: 10px;
+  margin-top: 50px;
+  background-color: rgb(233, 215, 187);
+}
+
+button {
+  border-radius: 20px;
+  padding: 10px 20px 10px 20px;
+  background-color: #77482f;
+  color: white;
+  text-shadow: 1px 1px #5a3724;
+}
+
+.receipt {
+  background-color: white;
+  text-align: center;
+  padding: 20px;
+  
+}
