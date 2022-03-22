@@ -6,7 +6,7 @@ here i have different options listed such as appetizers, entrees, desserts, and 
 there will also be a total button which is meant to list the values of selected onclick menu options
 the user has selected. each menu selection will then list the menu items which includes itemId, itemPrice, itemName, itemDescription. there will be two buttons under each menu item that has add to cart and remove from cart. the total button will then display a look similar to a receipt and values of each selected item.
 
-https://nnoguez.github.io/portfolio1/2
+https://nnoguez.github.io/portfolio1/
 
 
 # Getting Started with Create React App
