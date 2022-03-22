@@ -29,7 +29,9 @@ import React, { useState} from "react"
             <p>Amount in cart: {counter}<br></br></p>
             </>
         )
-    
-}
+    }
+
+
+
 
 export default MenuItem;

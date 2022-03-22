@@ -25,12 +25,13 @@ function MenuChoices(props) {
   }
 }
 
+
 // overall function encloses data and sets layout
-function App() {
+export default function App() {
   const [menu, setMenu] = useState(true);
   const [choice, setChoice] = useState(0);
+  const [total, setTotal] = useState(false);
   // const [price, setPrice] = useState(0);
-
 
   let appData = [
     {
@@ -142,26 +143,34 @@ function App() {
             <>
               <h1>Menu</h1>
               <h3>━━━ Mario's Magnifico Ristorante ━━━</h3>
-              <p>Select select a category to view our options:</p>
-              <button onClick={() => {setMenu(false); setChoice(1)}}> Appetizers </button>
+              <p>Please select a category to view our options:</p>
+              <button onClick={() => {setMenu(false); setChoice(1); setTotal(false)}}> Appetizers </button>
               <br></br>
               <br></br>
-              <button onClick={() => {setMenu(false); setChoice(2)}}> Entrées </button>
+              <button onClick={() => {setMenu(false); setChoice(2); setTotal(false)}}> Entrées </button>
               <br></br>
               <br></br>
-              <button onClick={() => {setMenu(false); setChoice(3)}}> Desserts </button>
+              <button onClick={() => {setMenu(false); setChoice(3); setTotal(false)}}> Desserts </button>
               <br></br>
               <br></br>
-              <button onClick={() => {setMenu(false); setChoice(4)}}> Beverages </button>
+              <button onClick={() => {setMenu(false); setChoice(4); setTotal(false)}}> Beverages </button>
               <br></br>
               <br></br>
               <br></br>
               <br></br>
-              <Total/>
+              {/* <Total/> */}
+              <button onClick={() => {setMenu(false); setTotal(true)}}> Total </button>
             </>
           :
             <>
-              <MenuChoices isChoice={choice} data1={appData} data2={entrData} data3={desData} data4={bevData}/>
+              {
+                ( total
+                  ?
+                    <Total/>
+                  :
+                    <MenuChoices isChoice={choice} data1={appData} data2={entrData} data3={desData} data4={bevData}/>
+                )
+              }
               <br></br>
               <br></br>
               <br></br>
@@ -176,29 +185,7 @@ function App() {
 
 
 // total page
-function Total() {
-  const [menu, setMenu] = useState(true);
-  return (
-    <div className="Total">
-      {
-        ( menu
-          ?
-            <>
-              <button onClick={() => {setMenu(false)}}> Total </button>
-               
-            </>
-          :
-            <>
-              <ShoppingCart/>
-              <button onClick={() => {setMenu(true)}}><b>Return</b></button>
-            </>
-        )
-      }
-    </div>
-  );
-}
-
-function ShoppingCart(menuName) {
+export function Total(menuName) {
   return (
     <ul class="receipt">
       Mario's Magnifico Ristorante
@@ -211,13 +198,13 @@ function ShoppingCart(menuName) {
       <br></br>         
       ----------------------------------------------------------
       {/* call in user on click items here to display on receipt*/}
-      {menuName.map(price => {
+      {/* {appData.map(price => {
         return (
-          <p key={price.menuName}> 
-          {price.menuName} - {price.menuName} 
+          <p key={price.appData}> 
+          {price.appData} - {price.appData} 
           </p>
-        )
-      })}
+        )  
+      })} */}
       ----------------------------------------------------------
       <br></br>
       Total:
@@ -227,4 +214,30 @@ function ShoppingCart(menuName) {
 }
 
 
-export default App;
+// function ShoppingCart(menuName) {
+//   return (
+//     <ul class="receipt">
+//       Mario's Magnifico Ristorante
+//       <br></br>
+//       2222 Piazza Azzurro 
+//       <br></br>
+//       Tuscany, Italy 56010
+//       <br></br>
+//       222-222-2222
+//       <br></br>         
+//       ----------------------------------------------------------
+//       {/* call in user on click items here to display on receipt*/}
+//       {menuName.map(price => {
+//         return (
+//           <p key={price.menuName}> 
+//           {price.menuName} - {price.menuName} 
+//           </p>
+//         )  
+//       })}
+//       ----------------------------------------------------------
+//       <br></br>
+//       Total:
+//       {/* price here, find way to run math and count all number values */}
+//     </ul>
+//   );
+// }
