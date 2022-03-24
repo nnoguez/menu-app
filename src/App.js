@@ -26,6 +26,7 @@ function MenuChoices(props) {
 }
 
 
+
 // overall function encloses data and sets layout
 export default function App() {
   const [menu, setMenu] = useState(true);
