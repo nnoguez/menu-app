@@ -28,10 +28,7 @@ function MenuChoices(props) {
 export function Greet(props) {
   const [greet, setGreet] = useState(false);
   let isChoice = props.isChoice;
-  let appData = props.data1;
-  let entrData = props.data2;
-  let desData = props.data3;
-  let bevData = props.data4;
+
   return(
     <div className="Greet">
     {
