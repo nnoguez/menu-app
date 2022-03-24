@@ -198,7 +198,7 @@ export function Total(props) {
       --------------------------------------
       {/* call in user on click items here to display on receipt*/}
 
-      
+      ``
       {/* {props.menuItems.map(price => {
         return (
           <p key={price.appData.menuItems}> 
