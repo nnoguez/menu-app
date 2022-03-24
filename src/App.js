@@ -28,14 +28,14 @@ function MenuChoices(props) {
 export function Greet() {
   // const [greet, setGreet] = useState(false);
   const [menu, setMenu] = useState(true);
-  const [total, setTotal] = useState(false);
+  // const [total, setTotal] = useState(false);
   return(
     <div className="Greet">
       {
         (menu
           ?
           <>
-          <button onClick={() => {setMenu(false); setTotal(true)}}> Total </button>
+          <button onClick={() => {setMenu(false)}}> Total </button>
           <Total/>
           </>
           :
