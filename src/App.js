@@ -25,31 +25,6 @@ function MenuChoices(props) {
   }
 }
 
-export function Greet() {
-  // const [greet, setGreet] = useState(false);
-  const [menu, setMenu] = useState(true);
-  // const [total, setTotal] = useState(false);
-  return(
-    <div className="Greet">
-      {
-        (menu
-          ?
-          <>
-            <button onClick={() => {setMenu(false)}}> Total </button>
-            <Total/>
-          </>
-          :
-          <>
-            <App/>
-            <br></br>
-            <button onClick={() => {setMenu(true)}}><b>Return</b></button> 
-          </>
-          
-        )
-      }
-    </div>
-  );
-}
 
 // overall function encloses data and sets layout
 export default function App() {
