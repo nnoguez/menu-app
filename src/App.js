@@ -27,6 +27,8 @@ function MenuChoices(props) {
 
 export function Greet() {
   const [greet, setGreet] = useState(false);
+  const [menu, setMenu] = useState(true);
+  const [total, setTotal] = useState(false);
   return(
     <div className="Greet">
       {
@@ -42,6 +44,11 @@ export function Greet() {
           </>
         )
       }
+              <br></br>
+              <br></br>
+              <br></br>
+              <br></br>
+              <button onClick={() => {setMenu(true)}}><b>Return</b></button> 
     </div>
   );
 }
