@@ -25,7 +25,25 @@ function MenuChoices(props) {
   }
 }
 
-
+export function Greet() {
+  const [greet, setGreet] = useState(false);
+  return(
+    <div className="Greet">
+    {
+      (greet
+        ?
+        <>
+        <Total/>
+        </>
+        :
+        <>
+        <MenuChoices isChoice={choice} data1={appData} data2={entrData} data3={desData} data4={bevData}/>
+        </>
+      )
+    }
+    </div>
+  );
+}
 
 // overall function encloses data and sets layout
 export default function App() {
