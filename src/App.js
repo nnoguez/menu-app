@@ -27,7 +27,7 @@ function MenuChoices(props) {
 
 export function Greet(props) {
   const [greet, setGreet] = useState(false);
-  let isChoice = props.isChoice;
+
 
   return(
     <div className="Greet">
