@@ -25,7 +25,7 @@ function MenuChoices(props) {
   }
 }
 
-export function Greet() {
+export function Greet(props) {
   const [greet, setGreet] = useState(false);
   return(
     <div className="Greet">
@@ -50,8 +50,6 @@ export default function App() {
   const [menu, setMenu] = useState(true);
   const [choice, setChoice] = useState(0);
   const [total, setTotal] = useState(false);
-  // const [profile, setProfile] = useState(false);
-  // const [price, setPrice] = useState(0);
 
   let appData = [
     {
