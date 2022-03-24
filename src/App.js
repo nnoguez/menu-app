@@ -29,18 +29,18 @@ export function Greet() {
   const [greet, setGreet] = useState(false);
   return(
     <div className="Greet">
-    {
-      (greet
-        ?
-        <>
-        <Total/>
-        </>
-        :
-        <>
-        <MenuChoices isChoice={choice} data1={appData} data2={entrData} data3={desData} data4={bevData}/>
-        </>
-      )
-    }
+      {
+        (greet
+          ?
+          <>
+          <Total/>
+          </>
+          :
+          <>
+          <MenuChoices isChoice={choice} data1={appData} data2={entrData} data3={desData} data4={bevData}/>
+          </>
+        )
+      }
     </div>
   );
 }
