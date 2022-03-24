@@ -45,9 +45,6 @@ export function Greet() {
         )
       }
       <br></br>
-      <br></br>
-      <br></br>
-      <br></br>
       <button onClick={() => {setMenu(true)}}><b>Return</b></button> 
     </div>
   );
