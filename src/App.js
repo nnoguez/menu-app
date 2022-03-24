@@ -35,12 +35,12 @@ export function Greet() {
         (menu
           ?
           <>
-          <button onClick={() => {setMenu(false)}}> Total </button>
-          <Total/>
+            <button onClick={() => {setMenu(false)}}> Total </button>
+            <Total/>
           </>
           :
           <>
-          <App/>
+            <App/>
           </>
         )
       }
