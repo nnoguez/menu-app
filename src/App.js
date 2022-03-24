@@ -33,6 +33,7 @@ export function Greet() {
         (greet
           ?
           <>
+          <button onClick={() => {setMenu(false); setTotal(true)}}> Total </button>
           <Total/>
           </>
           :
