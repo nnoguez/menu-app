@@ -31,7 +31,7 @@ export default function App() {
   const [menu, setMenu] = useState(true);
   const [choice, setChoice] = useState(0);
   const [total, setTotal] = useState(false);
-  const [profile, setProfile] = useState(false);
+  // const [profile, setProfile] = useState(false);
   // const [price, setPrice] = useState(0);
 
   let appData = [
@@ -145,7 +145,7 @@ export default function App() {
               <h1>Menu</h1>
               <h3>━━━ Mario's Magnifico Ristorante ━━━</h3>
               <p>Please select a category to view our options:</p>
-              <button onClick={() => {setMenu(false); setChoice(1); setTotal(false); setProfile(false)}}> Appetizers </button>
+              <button onClick={() => {setMenu(false); setChoice(1); setTotal(false)}}> Appetizers </button>
               <br></br>
               <br></br>
               <button onClick={() => {setMenu(false); setChoice(2); setTotal(false)}}> Entrées </button>
