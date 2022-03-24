@@ -41,11 +41,12 @@ export function Greet() {
           :
           <>
             <App/>
+            <br></br>
+            <button onClick={() => {setMenu(true)}}><b>Return</b></button> 
           </>
+          
         )
       }
-      <br></br>
-      <button onClick={() => {setMenu(true)}}><b>Return</b></button> 
     </div>
   );
 }
