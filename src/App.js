@@ -191,10 +191,10 @@ export function Profile() {
   {
     (profile
       ?
-      <button onClick={() => {setMenu(false); setProfile(false)}}><b>Submitt</b></button> 
+      <button onClick={() => {setMenu(false)}}><b>Submitt</b></button> 
       :
       <>
-      <button onClick={() => {setMenu(false); setProfile(true)}}><b>Submit</b></button> 
+      <button onClick={() => {setMenu(false)}}><b>Submit</b></button> 
       </>
     )
   }
