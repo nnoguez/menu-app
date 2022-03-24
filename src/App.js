@@ -31,6 +31,7 @@ export default function App() {
   const [menu, setMenu] = useState(true);
   const [choice, setChoice] = useState(0);
   const [total, setTotal] = useState(false);
+  const [profile, setProfile] = useState(false);
   // const [price, setPrice] = useState(0);
 
   let appData = [
@@ -144,7 +145,7 @@ export default function App() {
               <h1>Menu</h1>
               <h3>━━━ Mario's Magnifico Ristorante ━━━</h3>
               <p>Please select a category to view our options:</p>
-              <button onClick={() => {setMenu(false); setChoice(1); setTotal(false)}}> Appetizers </button>
+              <button onClick={() => {setMenu(false); setChoice(1); setTotal(false); setProfile(false)}}> Appetizers </button>
               <br></br>
               <br></br>
               <button onClick={() => {setMenu(false); setChoice(2); setTotal(false)}}> Entrées </button>
@@ -158,7 +159,7 @@ export default function App() {
               <br></br>
               <br></br>
               <br></br>
-              {/* <Total/> */}
+ 
               <button onClick={() => {setMenu(false); setTotal(true)}}> Total </button>
             </>
           :
@@ -183,9 +184,23 @@ export default function App() {
   );
 }
 
+export function Profile() {
+  const [profile, setProfile] = useState(false);
+  const [menu, setMenu] = useState(true);
+  {
+    (profile
+      ?
+      <button onClick={() => {setMenu(false); setProfile(false)}}><b>Submitt</b></button> 
+      :
+      <>
+      <button onClick={() => {setMenu(false); setProfile(true)}}><b>Submit</b></button> 
+      </>
+    )
+  }
+}
 
 // total page
-export function Total(menuName) {
+export function Total(props) {
   return (
     <ul class="receipt">
       Mario's Magnifico Ristorante
@@ -196,16 +211,18 @@ export function Total(menuName) {
       <br></br>
       222-222-2222
       <br></br>         
-      ----------------------------------------------------------
+      --------------------------------------
       {/* call in user on click items here to display on receipt*/}
-      {/* {appData.map(price => {
+
+      
+      {/* {props.menuItems.map(price => {
         return (
-          <p key={price.appData}> 
-          {price.appData} - {price.appData} 
+          <p key={price.appData.menuItems}> 
+          {price.appData.menuItems} - {price.appData.menuItems} 
           </p>
         )  
       })} */}
-      ----------------------------------------------------------
+      --------------------------------------
       <br></br>
       Total:
       {/* price here, find way to run math and count all number values */}
@@ -214,30 +231,16 @@ export function Total(menuName) {
 }
 
 
-// function ShoppingCart(menuName) {
+// export function Profile() {
 //   return (
-//     <ul class="receipt">
-//       Mario's Magnifico Ristorante
-//       <br></br>
-//       2222 Piazza Azzurro 
-//       <br></br>
-//       Tuscany, Italy 56010
-//       <br></br>
-//       222-222-2222
-//       <br></br>         
-//       ----------------------------------------------------------
-//       {/* call in user on click items here to display on receipt*/}
-//       {menuName.map(price => {
-//         return (
-//           <p key={price.menuName}> 
-//           {price.menuName} - {price.menuName} 
-//           </p>
-//         )  
-//       })}
-//       ----------------------------------------------------------
-//       <br></br>
-//       Total:
-//       {/* price here, find way to run math and count all number values */}
-//     </ul>
+//     <div class="j">
+//     <form>
+//     <label for="fname">First name:</label>
+//     <input type="text" id="fname" name="fname" value="John">
+//     <label for="lname">Last name:</label>
+//     <input type="text" id="lname" name="lname" value="Doe">
+//     <input type="submit" value="Submit">
+//   </form> 
+//   </div>
 //   );
 // }

@@ -1,0 +1,18 @@
+{
+	"folders": [
+		{
+			"path": "../../../../../Users/naomy3/github-classroom/UCF-GaiM/dig4639-s22-main-nnoguez"
+		},
+		{
+			"path": ".."
+		}
+	],
+	"settings": {
+		"gitdoc.autoCommitDelay": 15000,
+		"gitdoc.autoPush": "onCommit",
+		"gitdoc.autoPushDelay": 10000,
+		"gitdoc.commitValidationLevel": "none",
+		"gitdoc.enabled": true,
+		"files.autoSave": "afterDelay"
+	}
+}
