@@ -185,20 +185,6 @@ export default function App() {
   );
 }
 
-export function Profile() {
-  const [profile, setProfile] = useState(false);
-  const [menu, setMenu] = useState(true);
-  {
-    (profile
-      ?
-      <button onClick={() => {setMenu(false)}}><b>Submitt</b></button> 
-      :
-      <>
-      <button onClick={() => {setMenu(false)}}><b>Submit</b></button> 
-      </>
-    )
-  }
-}
 
 // total page
 export function Total(props) {
