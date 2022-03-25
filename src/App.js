@@ -214,17 +214,3 @@ export function Total(props) {
   );
 }
 
-
-// export function Profile() {
-//   return (
-//     <div class="j">
-//     <form>
-//     <label for="fname">First name:</label>
-//     <input type="text" id="fname" name="fname" value="John">
-//     <label for="lname">Last name:</label>
-//     <input type="text" id="lname" name="lname" value="Doe">
-//     <input type="submit" value="Submit">
-//   </form> 
-//   </div>
-//   );
-// }
